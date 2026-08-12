@@ -3,6 +3,7 @@ package net.lynn.cheesyhp;
 import net.fabricmc.api.ModInitializer;
 
 import net.lynn.cheesyhp.item.ModItems;
+import net.lynn.cheesyhp.util.ModLootTableModifiers;
 import net.minecraft.util.Identifier;
 
 import org.slf4j.Logger;
@@ -19,6 +20,7 @@ public class CheesyHP implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 
 		ModItems.registerModItems();
+		ModLootTableModifiers.modifyLootTables();
 	}
 
 	public static Identifier id(String path) {

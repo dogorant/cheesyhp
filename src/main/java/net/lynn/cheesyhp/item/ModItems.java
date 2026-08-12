@@ -11,6 +11,7 @@ import net.minecraft.util.Identifier;
 public class ModItems {
 
     public static final Item MAGIC_MUSHROOM = registerItem("magic_mushroom", new Item(new Item.Settings()));
+    public static final Item SPORE = registerItem("spore", new Item(new Item.Settings()));
 
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, Identifier.of(CheesyHP.MOD_ID, name), item);
@@ -19,8 +20,9 @@ public class ModItems {
     public static void registerModItems(){
         CheesyHP.LOGGER.info("registering mod items for " + CheesyHP.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(MAGIC_MUSHROOM);
+            entries.add(SPORE);
         });
     }
 }
