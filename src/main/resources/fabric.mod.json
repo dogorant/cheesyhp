@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "cheesyhp",
+	"version": "${version}",
+	"name": "Cheesy HP",
+	"description": "Custom HP system made exclusively for CheeseSMP",
+	"authors": [
+		"lynn - tg @templeunknown"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/cheesyhp/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.lynn.cheesyhp.CheesyHP"
+		],
+		"fabric-datagen": [
+			"net.lynn.cheesyhp.CheesyHPDataGenerator"
+		],
+		"client": [
+			"net.lynn.cheesyhp.CheesyHPClient"
+		]
+	},
+	"mixins": [
+		"cheesyhp.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
