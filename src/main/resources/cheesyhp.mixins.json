@@ -3,12 +3,10 @@
 	"package": "net.lynn.cheesyhp.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"PlayerEntityMixin"
 	],
+	"client": [],
 	"injectors": {
 		"defaultRequire": 1
-	},
-	"overwrites": {
-		"requireAnnotations": true
 	}
 }
