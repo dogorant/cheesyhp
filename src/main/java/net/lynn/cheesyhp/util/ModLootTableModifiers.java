@@ -22,14 +22,6 @@ public class ModLootTableModifiers {
             LootTables.TRIAL_CHAMBERS_CORRIDOR_CHEST,
             LootTables.TRIAL_CHAMBERS_ENTRANCE_CHEST,
             LootTables.TRIAL_CHAMBERS_INTERSECTION_CHEST,
-            LootTables.TRIAL_CHAMBERS_REWARD_CHEST,
-            LootTables.TRIAL_CHAMBERS_REWARD_COMMON_CHEST,
-            LootTables.TRIAL_CHAMBERS_REWARD_OMINOUS_CHEST,
-            LootTables.TRIAL_CHAMBERS_REWARD_OMINOUS_COMMON_CHEST,
-            LootTables.TRIAL_CHAMBERS_REWARD_OMINOUS_RARE_CHEST,
-            LootTables.TRIAL_CHAMBERS_REWARD_OMINOUS_UNIQUE_CHEST,
-            LootTables.TRIAL_CHAMBERS_REWARD_RARE_CHEST,
-            LootTables.TRIAL_CHAMBERS_REWARD_UNIQUE_CHEST,
             LootTables.TRIAL_CHAMBERS_SUPPLY_CHEST,
             LootTables.TRIAL_CHAMBERS_INTERSECTION_CHEST,
             LootTables.SIMPLE_DUNGEON_CHEST,
@@ -84,7 +76,7 @@ public class ModLootTableModifiers {
     public static void addItemToChest(LootTable.Builder tableBuilder){
             LootPool.Builder poolBuilder = LootPool.builder()
                     .rolls(ConstantLootNumberProvider.create(1))
-                    .conditionally(RandomChanceLootCondition.builder(1.0f))
+                    .conditionally(RandomChanceLootCondition.builder(0.67f))
                     .with(ItemEntry.builder(ModItems.SPORE))
                     .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)).build());
 
